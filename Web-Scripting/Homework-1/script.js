@@ -41,3 +41,13 @@ function photoImages() {
 
   }
 }
+
+
+function hideImages() {
+  $("#images").toggle();
+}
+
+function replaceTitle() {
+  var titleContent = $("#replaceTitle").val();
+  $("h1").html(titleContent);
+}

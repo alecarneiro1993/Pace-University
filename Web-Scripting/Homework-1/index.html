@@ -3,6 +3,7 @@
     <title>Alexandre's Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -41,6 +42,8 @@
          Mockup softwares (such as Balsamiq). There's a lot more that I can put here, but this is not a resume page, so let's get on with it! :D<br>
          <h2>P.S.: This is a basic website, so I'm not putting too much effort on it... sorry.</h2>
        </p>
+       <input id="replaceTitle" type="text" placeholder="Write the title to be replaced!" />
+       <button onclick="replaceTitle()">CHANGE TITLE!</button>
        <div id="images">
          <script>homeImages()</script>
        </div>
