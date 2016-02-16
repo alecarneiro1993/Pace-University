@@ -1,0 +1,5 @@
+SELECT * FROM Clients WHERE age>=30 AND age<=70;
+
+SELECT * FROM Food WHERE price<=25;
+
+SELECT * FROM Wearables WHERE name="Long Sleeve”;
