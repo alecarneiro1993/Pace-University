@@ -1,0 +1,9 @@
+body {
+  font-family: arial;
+  background-color: DeepSkyBlue;
+  text-align: center;
+}
+
+input[type='text'] {
+    width: 30px;
+}
