@@ -1,4 +1,19 @@
 /* Styles for Log in and Sign up pages*/
+
+$panel-heading-color: #499bde;
+$first-btn-color-hovered: #499bde;
+$second-btn-color-hovered: #1d812d;
+$form-btn-unhovered: #716e6e;
+$form-font-color: #faf7f7;
+
+@font-face {
+  font-family: 'Mochary';
+  src:url('mochary.ttf');
+  src:url('mochary.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
 }
@@ -11,14 +26,34 @@ body#sign_bg{
     background-size: cover;
 }
 
+div#wrapper {
+  margin: 0 auto;
+  width: 390px;
+  text-align: center;
+
+  span#logo {
+    clear:right;
+    display: block;
+    height: 145px;
+  }
+
+  em#slogan {
+    font-size: 17px;
+    display: block;
+
+  }
+}
+
+#logo {
+  font-family: 'Mochary';
+  font-size: 120px;
+}
+
 #sign_in_form, #sign_up_form, .panel {
   width: 390px;
   min-height: 290px;
-  /* bring your own prefixes */
-  position: fixed;
-  top: 15%;
-  left: 35%;
-
+  margin: 10px auto 0 auto;
+  padding: 0;
 }
 
 #sign_up_form .panel {
@@ -32,25 +67,18 @@ body#sign_bg{
 
 #sign_in_header, #sign_up_header {
   font-size: 2em;
-  background-color: #499bde;
-  color: #faf7f7;
+  background-color: $panel-heading-color;
+  color: $form-font-color;
 }
 
 #form_position {
   margin: 6px 0 0 10px;
 }
 
-.glyphicon.glyphicon-envelope {
+.size {
   font-size: 30px;
 }
 
-.glyphicon.glyphicon-lock {
-  font-size: 30px;
-}
-
-.glyphicon.glyphicon-ok {
-  font-size: 30px;
-}
 
 .icon_input_space {
   margin-right: 15px;
@@ -61,6 +89,11 @@ body#sign_bg{
   padding: 3px;
   position: relative;
   top: -9px;
+}
+
+.input_position {
+  margin-left: 48px;
+  margin-top: 9px;
 }
 
 .input_margin_top {
@@ -82,28 +115,29 @@ body#sign_bg{
 }
 
 #sign_submit {
+  margin-top: 10px;
   width: 338px;
-  background-color:#716e6e;
+  background-color: $form-btn-unhovered;
   border: none;
-  color: #faf7f7;
+  color: $form-font-color;
   font-size: 1.3em;
   transition: all 0.3s ease 0s;
   &:hover {
-    background-color: #499bde;
-    color: #faf7f7;
+    background-color: $first-btn-color-hovered;
+    color: $form-font-color;
   }
 }
 #sign_btn {
   margin-top: 10px;
   width: 338px;
-  background-color:#716e6e;
+  background-color: $form-btn-unhovered;
   border: none;
-  color: #faf7f7;
+  color: $form-font-color;
   font-size: 1.3em;
   transition: all 0.3s ease 0s;
   &:hover {
-    background-color: #1d812d;
-    color: #faf7f7;
+    background-color: $second-btn-color-hovered;
+    color: $form-font-color;
   }
 }
 
@@ -121,6 +155,7 @@ body#sign_bg{
   margin: 5px 0 0 0;
 }
 
-.field_with_errors {}
-
+label {
+  margin-left: 10px;
+}
 /* End of Log in and Sign up pages */

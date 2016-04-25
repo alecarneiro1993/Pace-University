@@ -1,15 +1,18 @@
+<div id="wrapper">
+  <span id='logo'>Slife</span><em id="slogan">Making College easier!</em>
+</div>
 <div id="sign_in_form" class="container">
   <div id="no-border" class="panel panel-default">
-    <div id="sign_in_header" class="panel-heading text-center">Slife Authentication</div>
+    <div id="sign_in_header" class="panel-heading text-center">Authentication</div>
       <div id="form_position" class="panel-body">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= alert %>
           <div class="field input_margin_top">
-            <span class="glyphicon glyphicon-envelope icon_input_space"></span>
+            <span class="glyphicon glyphicon-envelope icon_input_space size"></span>
             <%= f.email_field :email, autofocus: true, class:"sign_input", :placeholder => "Your email address..."%>
           </div>
           <div class="field input_margin_top">
-            <span class="glyphicon glyphicon-lock icon_input_space"></span>
+            <span class="glyphicon glyphicon-lock icon_input_space size"></span>
             <%= f.password_field :password, autocomplete: "off", :placeholder => "Your password...", class:"sign_input" %>
           </div>
           <div class="actions">
