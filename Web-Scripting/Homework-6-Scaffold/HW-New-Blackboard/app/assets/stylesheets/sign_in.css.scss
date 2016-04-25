@@ -5,6 +5,8 @@ $first-btn-color-hovered: #499bde;
 $second-btn-color-hovered: #1d812d;
 $form-btn-unhovered: #716e6e;
 $form-font-color: #faf7f7;
+$sign-in-logo-color: #fefefe;
+$sign-in-slogan-color: #f5f1f1;
 
 @font-face {
   font-family: 'Mochary';
@@ -14,15 +16,8 @@ $form-font-color: #faf7f7;
   font-style: normal;
 }
 
-html {
-  height: 100%;
-}
-body {
-  min-height: 100%;
-}
-
-body#sign_bg{
-    background: url('sign_in_bg.png') no-repeat center center fixed;
+body#sign-bg{
+    background: url('sign-in-bg.png') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -31,32 +26,31 @@ div#wrapper {
   width: 390px;
   text-align: center;
 
-  span#logo {
+  span#logo-sign-in {
+    color: $sign-in-logo-color;
     clear:right;
     display: block;
     height: 145px;
+    font-size: 120px;
   }
 
   em#slogan {
-    font-size: 17px;
+    color: $sign-in-slogan-color;
+    font-size: 18px;
     display: block;
 
   }
 }
 
-#logo {
-  font-family: 'Mochary';
-  font-size: 120px;
-}
 
-#sign_in_form, #sign_up_form, .panel {
+#sign-in-form, #sign-up-form, .panel {
   width: 390px;
   min-height: 290px;
   margin: 10px auto 0 auto;
   padding: 0;
 }
 
-#sign_up_form .panel {
+#sign-up-form .panel {
   min-height: 350px;
   overflow: hidden;
 }
@@ -65,13 +59,13 @@ div#wrapper {
   border: none;
 }
 
-#sign_in_header, #sign_up_header {
+#sign-in-header, #sign-up-header {
   font-size: 2em;
   background-color: $panel-heading-color;
   color: $form-font-color;
 }
 
-#form_position {
+#form-position {
   margin: 6px 0 0 10px;
 }
 
@@ -80,41 +74,41 @@ div#wrapper {
 }
 
 
-.icon_input_space {
+.icon-input-space {
   margin-right: 15px;
 }
 
-.sign_input {
+.sign-input {
   width: 80%;
   padding: 3px;
   position: relative;
   top: -9px;
 }
 
-.input_position {
+.input-position {
   margin-left: 48px;
   margin-top: 9px;
 }
 
-.input_margin_top {
+.input-margin-top {
   margin-top: 10px;
 }
 
-#minimum_length {
+#minimum-length {
   margin-left: 50px;
 }
 
-#checkbox_style {
+#checkbox-style {
   transform: scale(1.3);
   margin-left: 7px;
   margin-top: 0;
 }
 
-.label_margin {
+.label-margin {
   margin-left: 10px;
 }
 
-#sign_submit {
+#sign-submit {
   margin-top: 10px;
   width: 338px;
   background-color: $form-btn-unhovered;
@@ -127,7 +121,7 @@ div#wrapper {
     color: $form-font-color;
   }
 }
-#sign_btn {
+#sign-btn {
   margin-top: 10px;
   width: 338px;
   background-color: $form-btn-unhovered;
@@ -141,17 +135,17 @@ div#wrapper {
   }
 }
 
-#error_explanation {
+#error-explanation {
   width: 330px;
   font-size: 12px;
 }
 
-#error_explanation h2 {
+#error-explanation h2 {
   font-size: 15px;
   margin: 0;
 }
 
-#error_explanation ul {
+#error-explanation ul {
   margin: 5px 0 0 0;
 }
 

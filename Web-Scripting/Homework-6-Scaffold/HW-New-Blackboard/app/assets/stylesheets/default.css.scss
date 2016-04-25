@@ -1,0 +1,49 @@
+$header-bg: #5dacc6;
+$user-bg: rgba(113, 111, 111, 0.7);
+$logout-hover: #51bbde;
+$logo-color: #fefefe;
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+div#header-logo {
+
+  background-color: $header-bg;
+  width: 100%;
+
+  span#logo {
+    font-size: 60px;
+    margin-left: 60px;
+    width: 12%;
+    color: $logo-color;
+  }
+
+  span#user-credentials {
+    margin: 21px 50px 0 0;
+    float: right;
+    background-color: $user-bg;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+
+    a#logout {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 14px;
+      margin-left: 3px;
+
+      &:hover {
+        color: $logout-hover;
+      }
+    }
+  }
+}
+
+#logo, #logo-sign-in {
+  font-family: 'Mochary';
+}

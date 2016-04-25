@@ -7,13 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <% if !user_signed_in? %>
-<body id="sign_bg">
+<body id="sign-bg">
 <% else %>
 <body>
+  <header>
+    <div id="header-logo">
+        <span id="logo">Slife</span>
+        <span id="user-credentials">
+          Welcome,
+          <% if current_user.professor? %>
+          Professor <%= current_user.full_name %>!
+          <% else %>
+          <%= current_user.full_name %>!
+          <% end %>
+          <%= link_to('X', destroy_user_session_path, :method => :delete, :id => "logout") %>
+        </span>
+    </div>
+
+    <nav class="navbar navbar-default">
+
+    </nav>
+  </header>
 <% end %>
   <%= yield %>'
-  <% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  <% end %>
 </body>
 </html>
