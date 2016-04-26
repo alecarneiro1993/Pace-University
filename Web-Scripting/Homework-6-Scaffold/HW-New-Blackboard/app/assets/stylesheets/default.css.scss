@@ -1,49 +1,93 @@
 $header-bg: #5dacc6;
-$user-bg: rgba(113, 111, 111, 0.7);
-$logout-hover: #51bbde;
+$menu-text-color: #5dacc6;
 $logo-color: #fefefe;
+
+@font-face {
+  font-family: 'Mochary';
+  src:url('mochary.ttf');
+  src:url('mochary.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   height: 100%;
 }
 body {
   min-height: 100%;
+  font-family: Helvetica, Arial;
 }
 
-div#header-logo {
+main {
+  width: 60%;
+  min-height: 60%;
+  margin: 0 auto;
+}
+
+header#header {
 
   background-color: $header-bg;
   width: 100%;
-
+  display: block;
+  height: 100px;
   span#logo {
     font-size: 60px;
-    margin-left: 60px;
-    width: 12%;
+    margin-left: 35px;
     color: $logo-color;
+    position: absolute;
+    top: 10px;
+  }
+
+  nav.navbar {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    left: 12%;
+
+    ul {
+      li {
+        a {
+          color: #FFF;
+          transition: 0.4s;
+          font-size: 20px;
+          text-decoration: none;
+          padding: 39.5px 25px;
+
+          &:hover {
+            color: $menu-text-color;
+            background-color: #fff;
+          }
+        }
+      }
+    }
   }
 
   span#user-credentials {
-    margin: 21px 50px 0 0;
+    margin: 40px 50px 0 0;
+    vertical-align: middle;
     float: right;
-    background-color: $user-bg;
-    padding: 10px 5px;
     color: #fff;
     font-size: 15px;
-    border-radius: 5px;
 
     a#logout {
       text-decoration: none;
       color: #FFF;
       font-size: 14px;
       margin-left: 3px;
-
-      &:hover {
-        color: $logout-hover;
-      }
     }
   }
 }
 
 #logo, #logo-sign-in {
   font-family: 'Mochary';
+}
+
+#no-border {
+  border: none;
+}
+
+.input-field {
+  width: 30%;
+  padding: 3px;
+  margin-left: 5px;
 }

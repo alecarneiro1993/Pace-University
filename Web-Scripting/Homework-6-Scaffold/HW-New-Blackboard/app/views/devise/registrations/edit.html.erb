@@ -1,11 +1,30 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<div class="page-heading">
+  <h1>Edit Profile</h1>
+</div>
+<div id="profile-panel-size" class="panel panel-default">
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <% if current_user.avatar? %>
+    <%= image_tag(current_user.avatar.url, id: "user-avatar",class: "img-thumbnail img-responsive") %>
+    <div class="file-input">
+      <span class="glyphicon glyphicon-file"></span>
+      <span id="file-text">Choose a file</span>
+      <%= f.file_field :avatar, title: "Please choose an image" %>
+      <%= f.hidden_field :avatar_cache %>
+    </div>
+      <% else %>
+      <%= image_tag('avatar-placeholder.png', id: "user-avatar",class: "img-thumbnail img-responsive") %>
+    <div class="file-input">
+      <span class="glyphicon glyphicon-file"></span>
+      <span id="file-text">Choose a file</span>
+      <%= f.file_field :avatar, title: "Please choose an image" %>
+      <%= f.hidden_field :avatar_cache %>
+    </div>
+      <% end %>
+      <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: "input-field" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

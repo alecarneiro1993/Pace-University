@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/show'
+
   devise_for :users, :controllers => { registrations: 'registrations'}
   get 'home/index'
 

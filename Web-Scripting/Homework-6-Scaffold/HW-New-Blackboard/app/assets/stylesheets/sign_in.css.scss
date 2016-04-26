@@ -8,13 +8,7 @@ $form-font-color: #faf7f7;
 $sign-in-logo-color: #fefefe;
 $sign-in-slogan-color: #f5f1f1;
 
-@font-face {
-  font-family: 'Mochary';
-  src:url('mochary.ttf');
-  src:url('mochary.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 body#sign-bg{
     background: url('sign-in-bg.png') no-repeat center center fixed;
@@ -42,8 +36,7 @@ div#wrapper {
   }
 }
 
-
-#sign-in-form, #sign-up-form, .panel {
+#sign-in-form, #sign-up-form {
   width: 390px;
   min-height: 290px;
   margin: 10px auto 0 auto;
@@ -55,9 +48,7 @@ div#wrapper {
   overflow: hidden;
 }
 
-#no-border {
-  border: none;
-}
+
 
 #sign-in-header, #sign-up-header {
   font-size: 2em;
@@ -147,9 +138,5 @@ div#wrapper {
 
 #error-explanation ul {
   margin: 5px 0 0 0;
-}
-
-label {
-  margin-left: 10px;
 }
 /* End of Log in and Sign up pages */

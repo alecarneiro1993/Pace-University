@@ -9,14 +9,19 @@ class ApplicationController < ActionController::Base
 
  def configure_permitted_parameters
    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-     user_params.permit({ roles: [:professor] }, :email, :password, :password_confirmation)
+     user_params.permit({ roles: [:professor] }, :first_name, :last_name, :email, :password, :password_confirmation)
    end
  end
 
-  protected
- def authenticate_user!
+ def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:account_update) { |u|
+      u.permit(:first_name, :last_name, :avatar, :avatar_cache, :email, :bio, :password, :password_confirmation, :current_password)
+    }
+  end
+
+ def authenticate_user!(options={})
    if user_signed_in?
-     super
+     super(options)
    else
      redirect_to login_path, :notice => 'if you want to add a notice'
      ## if you want render 404 page

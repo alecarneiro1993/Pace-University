@@ -10,9 +10,16 @@
 <body id="sign-bg">
 <% else %>
 <body>
-  <header>
-    <div id="header-logo">
+  <header id="header">
         <span id="logo">Slife</span>
+        <nav class="navbar">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Profile", user_show_path %></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+        </nav>
         <span id="user-credentials">
           Welcome,
           <% if current_user.professor? %>
@@ -22,13 +29,10 @@
           <% end %>
           <%= link_to('X', destroy_user_session_path, :method => :delete, :id => "logout") %>
         </span>
-    </div>
-
-    <nav class="navbar navbar-default">
-
-    </nav>
   </header>
 <% end %>
+<main>
   <%= yield %>'
+</main>
 </body>
 </html>
